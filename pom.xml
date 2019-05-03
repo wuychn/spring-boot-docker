@@ -62,6 +62,19 @@
                     <dockerHost>http://192.168.10.128:2375</dockerHost>
                 </configuration>
             </plugin>
+
+            <!-- 再Maven中使用Cobertura代码覆盖率度量 -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <formats>
+                        <format>html</format>
+                        <format>xml</format>
+                    </formats>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
