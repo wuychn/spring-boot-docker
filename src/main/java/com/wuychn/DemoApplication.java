@@ -17,7 +17,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 
     @GetMapping("/hello")
     public String hello() {
-        return "hello, Jenkins！";
+        return "hello, Jenkins！@@";
     }
 
     @Override
