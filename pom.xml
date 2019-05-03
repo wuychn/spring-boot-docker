@@ -99,7 +99,7 @@
             </plugin>
 
             <!-- 使用cargo实现jenkins自动部署远程tomcat -->
-            <plugin>
+            <!--<plugin>
                 <groupId>org.codehaus.cargo</groupId>
                 <artifactId>cargo-maven2-plugin</artifactId>
                 <version>1.4.15</version>
@@ -120,7 +120,7 @@
                         </properties>
                     </configuration>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 
