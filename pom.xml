@@ -97,6 +97,30 @@
                     </formats>
                 </configuration>
             </plugin>
+
+            <!-- 使用cargo实现jenkins自动部署远程tomcat -->
+            <plugin>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven2-plugin</artifactId>
+                <version>1.4.15</version>
+                <configuration>
+                    <container>
+                        <containerId>tomcat8x</containerId>
+                        <type>remote</type>
+                    </container>
+                    <configuration>
+                        <type>runtime</type>
+                        <properties>
+                            <cargo.tomcat.manager.url>http://localhost:8088/manager</cargo.tomcat.manager.url>
+                            <cargo.remote.username>admin</cargo.remote.username>
+                            <cargo.remote.password>admin</cargo.remote.password>
+                            <cargo.servlet.port>8088</cargo.servlet.port>
+                            <cargo.hostname>localhost</cargo.hostname>
+                            <cargo.tomcat.ajp.port>8009</cargo.tomcat.ajp.port>
+                        </properties>
+                    </configuration>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
